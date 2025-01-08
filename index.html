@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chiptune4Evah</title>
+    <link rel="preload" href="css/estilos.css" as="style">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header> <!--Título-->
+        <a href="index.html">
+        <img class="logo-img" src="img/logoweb.gif" alt="">
+        </a>
+        <nav class="navbar">
+            <!--Navegación-->
+                <a class="navbar-link navbar-link-active" href="index.html">Inicio</a> 
+                <a class="navbar-link" href="foro.html">Foros</a> 
+                <a class="navbar-link" href="articulos.html"> Glosario</a>
+                <a class="navbar-link" href="contacto.html"> Contacto</a>
+        </nav>
+    </header>
+    <div class="dropdown"> <!-- Menú Login -->
+        <span>LOG IN</span>
+        <div id="userstatus", class="dropdown-content">
+            <form class="login-form">  <!-- Seccion del Formulario -->
+                <div class="campo">
+                <label class="campo_label" for="username">Username </label>
+                <input type="text" id="username" name="username" placeholder="Username">
+                </div>
+                <div class="campo">
+                <label class="campo_label" for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Password">
+                </div>
+                <div class="campo">
+                <input type="submit" value="LOG IN" class="logbutton">
+                </div>
+                <div class="form-foot">
+                <input class="boton-cerrar" type="button" value=".:cerrar:.">
+                </div>
+            </form>
+        </div>
+    </div>
+    <main class="container-global"> <!--Posts-->
+        <div class="section-1">
+            <h1 style="font-size: 4.6rem; text-align: center; color: aqua; background: rgba(0, 0, 0, 0.411); padding: 20px;">Discusiones Destacadas!</h1>
+            <div class="separador"></div>
+            <article class="post">
+                <h2 class="titulo-post">Título 1</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis numquam adipisci hic tempora odit tenetur officiis, vero neque eos eligendi. Rerum aliquid atque, rem fugiat laboriosam modi iure tempore quasi.</p>
+                <img src="img/placeholder2.png">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem accusamus fuga repellat neque dolore at aperiam, unde error expedita deserunt earum cum quos mollitia eligendi tempora excepturi! Quos, dolorem aliquid?</p>
+            </article>
+
+            <article class="post">
+                <h2 class="titulo-post">Título 2</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis numquam adipisci hic tempora odit tenetur officiis, vero neque eos eligendi. Rerum aliquid atque, rem fugiat laboriosam modi iure tempore quasi.</p>
+                <img src="img/pink-deerling.gif">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem accusamus fuga repellat neque dolore at aperiam, unde error expedita deserunt earum cum quos mollitia eligendi tempora excepturi! Quos, dolorem aliquid?</p>
+            </article>
+
+            <article class="post">
+                <h2 class="titulo-post">Título 3</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis numquam adipisci hic tempora odit tenetur officiis, vero neque eos eligendi. Rerum aliquid atque, rem fugiat laboriosam modi iure tempore quasi.</p>
+                <img src="img/placeholder8.png">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem accusamus fuga repellat neque dolore at aperiam, unde error expedita deserunt earum cum quos mollitia eligendi tempora excepturi! Quos, dolorem aliquid?</p>
+            </article>
+            <article class="post">
+                <h2 class="titulo-post">Título 4</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis numquam adipisci hic tempora odit tenetur officiis, vero neque eos eligendi. Rerum aliquid atque, rem fugiat laboriosam modi iure tempore quasi.</p>
+                <img src="img/placeholder9.png">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem accusamus fuga repellat neque dolore at aperiam, unde error expedita deserunt earum cum quos mollitia eligendi tempora excepturi! Quos, dolorem aliquid?</p>
+            </article>
+            <article class="post">
+                <h2 class="titulo-post">Título 5</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis numquam adipisci hic tempora odit tenetur officiis, vero neque eos eligendi. Rerum aliquid atque, rem fugiat laboriosam modi iure tempore quasi.</p>
+                <img src="img/cd1fd043fc4bc83e90225dc2c412c194.gif">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem accusamus fuga repellat neque dolore at aperiam, unde error expedita deserunt earum cum quos mollitia eligendi tempora excepturi! Quos, dolorem aliquid?</p>
+            </article>
+            <article class="post">
+                <h2 class="titulo-post">Título 5</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis numquam adipisci hic tempora odit tenetur officiis, vero neque eos eligendi. Rerum aliquid atque, rem fugiat laboriosam modi iure tempore quasi.</p>
+                <img src="img/cd1fd043fc4bc83e90225dc2c412c194.gif">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem accusamus fuga repellat neque dolore at aperiam, unde error expedita deserunt earum cum quos mollitia eligendi tempora excepturi! Quos, dolorem aliquid?</p>
+            </article>
+        </div>
+        <div class="section-news"> <!-- Noticias -->
+            <h3>Noticias!</h3>
+            <ul class="news-list">
+                    <li class="noticia">
+                    Un nuevo tracker open-source está en desarrollo! 
+                    <img src="img/noticia-1.jpg">
+                    Dale un vistaso en su web oficial!
+                    <br>
+                    <a href="https://wavetracker.org/">wavetracker.org</a>
+                    </li>
+                    <li class="noticia">
+                    El uso de menos instrumentos al componer brinda una nueva perspectiva dicen expertos!
+                    <img src="img/noticia-2.png">
+                    Hora de poner ese conocimiento a prueba!
+
+                    </li>
+                    <li class="noticia">
+                    Se cree que la popularidad de Klass ha aumentado en un 200% en los últimos días!
+                    <img src="img/klass.png">
+                    Salve Klass!
+                    </li>   
+            </ul><!-- Sponsoreado -->
+            <div class="separador">&nbsp;</div>
+            <div class="publicidad">
+                <h1>NUEVO TRACKER GENIAL PRUEBENLO YA</h1>
+                <div class="separador"></div>
+                <p>ESTE TRACKER TE VOLARÁ LA CABEZA PORQUE A MI ME VOLÓ EL TIMPANO</p>
+                <div class="separador"></div>
+                <a href="https://tildearrow.org/furnace/" target="_blank"><img src="img/placeholder.png" alt=""></a>
+                <br>
+                <a href="https://tildearrow.org/furnace/" target="_blank">furnace tracker</a>
+            </div>
+        </div>
+    </main>
+    <div class="showcase-container">
+        <div class="showcase-text-content">
+        <h1>TRACKERS DESTACADOS</h1>
+        <p>En nuestro blog/foro apoyamos a todo aquel que posea interés en poner su creatividad a prueba
+            <br>
+            El uso de trackers puede contribuir a nuestar comunidad conmemorando las épocas doradas del medio con sus propias limitaciones
+            <br>
+            Checa mas abajo en nuestra lista seleccionada de trackers y empieza a componer!
+        </p>
+        </div>
+        <div class="showcase-list">
+            <div class="articulolista">
+                <h2>LSDJ</h2>
+                <img src="img/placeholder2.png" alt="">
+                <p>Clásico y Versatil, LSDJ pone a prueba todas las capacidades técnicas de la gameboy!</p>
+            </div>
+            <div class="articulolista">
+                <h2>Famitracker</h2>
+                <img src="img/placeholder3.png" alt="">
+                <p>El tracker original por excelencia.
+                    <br>
+                    Amas la NES/Famicon? Puede que este sea para ti!</p>
+            </div>
+            <div class="articulolista">
+                <h2>Milkytracker</h2>
+                <img src="img/placeholder4.jpg" alt="">
+                <p>Tomando de referencia a las capacidades de la Commodore Amiga, te permitirá crear ondas de sonido mas complejas!
+            </div>
+            <div class="articulolista">
+                <h2>Fasttracker II</h2>
+                <img src="img/placeholder5.png" alt="">
+                <p>Pese a que su última iteración se dió en 1999, sigue siendo un tracker muy poderoso en la demoscene.
+                </p>
+            </div>
+            <div class="articulolista">
+                <h2>Mario Paint</h2>
+                <img src="img/placeholder6.png" alt="">
+                <p>Parece una broma no? Sin embargo si eres alguien paciente y determinado, podrás sacar todo su potencial... Vamos, solo intentalo!</p>
+            </div>
+            <div class="articulolista">
+                <h2>Famistudio</h2>
+                <img src="img/placeholder7.png" alt="">
+                <p>Famistudio las mismas funciones que cualquier tracker, sin embargo si quieres una interfaz mas amistosa puede ser tu primera opción!</p>
+            </div>
+        </div>
+    </div>
+    <footer class="foot"><!-- Footer -->
+        <section>
+        <a href="index.html">Ir al inicio</a>
+        <a href="https://mikaiah.newgrounds.com/">Contact me!</a>
+        </section>
+        <p>Copyright &copy; Mikhail 2024</p>
+    </footer>
+    <script src="js/scripts.js"></script>
+</body>
+</html>

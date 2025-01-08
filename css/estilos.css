@@ -1,0 +1,553 @@
+/* Globales */
+html {
+    box-sizing: border-box; /* aplica un modelo de disposición de caja natural a todos los elementos, pero permitiendo que los componentes cambien https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+    font-size: 62.5%; /* Elemento que permite que los rem se ajusten a una medida mas sencilla */
+    font-family: "Montserrat", sans-serif;
+}
+
+*,*:before,*:after {
+    box-sizing: inherit; /* Mirar el primer elemento */
+    margin: 0;
+}
+
+body{
+    background-color: black;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    background-image: url(../css/bg_img/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: right;
+}
+
+@media (min-width: 768px){
+   body {
+    background-position: center center;
+   }
+}
+
+img{
+    width: 100%;
+}
+
+.separador{
+    margin: 1.2rem;
+}
+/* Elementos del Body */
+
+/* Header */
+
+/* Dropdown de Login */
+.dropdown{
+    position:absolute;
+    color: aqua;
+    text-align: left;
+    margin: 0 3rem;
+    margin-top: -1px;
+    z-index: 1;
+}
+
+.dropdown span:hover{
+    color: #0051ff;
+    cursor: pointer;
+}
+
+.dropdown-content{
+    display: none;
+    justify-content: left;
+}
+
+.dropdown-show-content{
+    display: flex;
+}
+/* Formulario Login */
+.login-form{
+    color: aqua;
+    border: 2px solid rgb(0, 112, 112);
+    padding: .5rem 2rem;
+    background-color: #000f2c;
+    margin-bottom: 1rem;
+    box-shadow: 5px 0px 50px rgb(80, 80, 80);
+}
+
+.campo{
+    display: flex;
+    margin-bottom: 1rem;
+    justify-content: center;
+}
+
+.campo_label{
+    flex: 0 0 9rem; /* Factor de crecimiento | Factor de Decremento | Tamaño Base */ /* Sinergisa con el flex del padre campo que permite ajustar el tamaño del flex y sus elementos */ 
+}
+
+.logbutton{
+    padding: .9rem;
+    font-size: 2.2rem;
+    font-weight: 800;
+    background-color: #193d74;
+    color: aqua;
+    border: none;
+}
+
+.logbutton:hover{
+    cursor:pointer;
+}
+
+.boton-cerrar{
+    text-transform: uppercase;
+    font-size: 1rem;
+    background: none;
+    border: none;
+    color: aqua;
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+
+.boton-cerrar:hover{
+    color: rgb(130, 163, 255);
+    cursor:pointer;
+}
+
+/* Logo de la página */
+.logo-img{
+    width: 100%;
+} 
+
+/* Barra de Navegacion */
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #1b1b1b;
+    z-index: 2;
+}
+
+@media (min-width: 768px){ /* Elementos que aplican solo en resoluciones mayor al minimo */
+    .navbar{
+        gap: 10rem;
+        flex-direction: row;
+    }
+    .navbar:nth-last-child(){
+        gap: 0;
+    }
+}
+.navbar-link{
+    color: white;
+    text-decoration: none;
+    font-size: 1.6em;
+    padding: 1.5rem;
+    transition: scale .2s ease;
+}
+
+.navbar-link:hover{
+    color:aqua;
+    cursor: pointer;
+    scale: 1.5;
+}
+
+.navbar-link-active{
+    color: aqua;
+}
+/* GridsGlobal y Básicos */
+
+.container-global{
+    display: grid;
+    max-width: 130rem;
+    width: 95%;
+    margin: 6rem auto;
+    background-color: rgb(0, 7, 20, 0.8);
+    column-gap: 2rem;
+    padding: 2rem 5rem;
+}
+
+@media (min-width: 768px){
+    .container-global{
+        grid-template-columns: 4.6fr 1.8fr;
+    }
+}
+
+.section-1, .section-2, .section-3, .section-4{
+    background-color: #001a4b88;
+    padding: 4rem;
+}
+
+.section-news{
+    background-color: rgba(42, 48, 54, 0.5);
+}
+
+.section-dato{
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+@media (min-width: 768px){
+   .section-dato{
+    width: 100%;
+   }
+}
+
+
+/* Posts */
+.post{
+    background-color: black;
+    color: white;
+    margin-bottom: 4rem;
+    border: 5px groove rgba(54, 255, 205, 0.5);
+    text-align: justify;
+    transition: box-shadow .2s ease-in;
+}
+
+.post:hover{
+    box-shadow: -5px 2px rgb(0, 255, 242);
+    cursor: pointer;
+}
+
+.titulo-post{
+    text-align: center;
+    font-size: 4.2rem;
+    background-color: #003f3f;
+    color: aqua;
+}
+
+.post p, .post img{
+    padding: 0.7rem;
+    font-size: 1.6rem;
+}
+
+.post img{
+    max-width: 40%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Noticias Aside */
+.section-news{
+    width: auto; /* (Ver Media) */
+                 /* Cuando la resolución sea menor a 768px se ajusta automaticamente el tamaño del grid */
+    margin: 2rem auto;
+    padding: 2rem;
+    color: white;
+}
+
+@media (min-width: 768px){
+    .section-news{
+        width: 100%;
+        margin: 2rem auto;
+    }
+}
+
+.section-news h3{
+    text-align: center;
+    font-size: 4.6rem;
+    background-color: rgba(162, 244, 255, 0.151);
+}
+
+.section-news a{
+    text-decoration: none;  
+    color: rgb(226, 255, 245);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.section-news a:hover{
+    text-decoration: none;
+    color: rgb(140, 242, 255);
+}
+
+.news-list{
+    margin: 2rem auto;
+    text-align: center;
+    padding: 0;
+    list-style-type: none;
+}
+
+.noticia{
+    margin: 1rem;
+    margin-bottom: 4rem;
+    background-color: #003f3f;
+    border: 2px dashed cyan;
+    padding: 2rem;
+    box-shadow: 5px 5px rgba(0, 247, 255, 0.473), -5px -5px rgba(255, 170, 43, 0.315), 10px 10px rgba(235, 255, 60, 0.212)
+}
+
+/* .noticia:last-child{
+    grid-column: 1/3;
+} */
+
+.noticia img{
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+}
+/* Sponsors */
+.publicidad{
+    border: 2px solid cyan;
+    padding: 2rem;
+    text-align: center;
+    background-color: #001a4b;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    box-shadow: 5px 5px rgb(0, 247, 255, 0.473), -5px -5px rgb(68, 255, 43, 0.315), 10px 10px rgb(255, 60, 60, 0.215);
+}
+
+.publicidad h1{
+    color: yellow;
+    background-color: #003f3f;
+    font-size: 2.6rem;
+}
+
+.publicidad img{
+    width: 100%;
+}
+
+/* Trackers Destacados */
+.showcase-container{
+    max-width: 100%;
+    padding: 3rem;
+    text-align: center;
+    background-color: rgba(58, 23, 255, 0.2);
+    color: aqua;
+}
+
+.showcase-text-content{
+    max-width: 100%;
+    margin: 2rem auto;
+}
+
+.showcase-text-content h1{
+    font-size: 5.6rem;
+    background-color:  rgba(0, 0, 0, 0.5);
+}
+
+.showcase-text-content p{
+    color: aquamarine;
+    font-size: 2.0rem; 
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.showcase-list{
+    display: grid;
+    width: 100%;
+    margin: 0 auto;
+    grid-template-columns: 3fr 3fr;
+    column-gap: 1rem;
+    row-gap: 1rem;
+    background-color: #003f3f;
+    padding: 1rem;
+}
+
+@media (min-width: 768px){
+    .showcase-list{
+        grid-template-columns: 3fr 3fr 3fr;
+    }
+}
+
+.articulolista{
+    background-color: #000b1f;
+    padding: 2rem;
+    transition: scale .1s ease-in-out;
+}
+
+.articulolista:hover{
+    scale: 1.1;
+    cursor: pointer;
+    border: 1px aqua solid;
+}
+
+.articulolista p{
+    font-size: 2rem;
+}
+
+.articulolista img{
+    width: 90%;
+}
+
+/* Pagina Foros */
+/* Lista de Foros, Grid-2 encontrado mas arriba en los cosos globales */
+.lista-foro{ /* Contenedor */
+    padding: 0;
+    list-style-type: none;
+    color: white;
+    text-align: justify;
+}
+
+.lista-foro-topico{ /* Elementos */
+    transition: scale .2s ease-in;
+    font-size: 1.9rem;
+    line-height: 2.5rem;
+    background-color: #00081a;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 2px solid black;
+}
+
+.lista-foro-topico:hover{
+    scale: 1.05;
+    color: aqua;
+    cursor: pointer;
+}
+
+.lista-foro-topico a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.lista-foro-topico a:hover{
+    color: aqua;
+}
+
+.lista-foro-topico h3{
+    font-size: 2.6rem;
+    padding: 1rem 1rem;
+    background-color: rgba(34, 73, 117, 0.281);
+}
+
+
+/* Datos */
+.dato{
+    border: 4px solid #ffffff;
+    background-color: rgb(69, 80, 116);
+    margin: 4rem 2rem;
+    padding: 2rem;
+    border-radius: 2rem;
+    box-shadow:5px 5px rgb(109, 174, 177), 10px 10px rgb(105, 65, 216), 15px 15px rgb(57, 143, 68);
+    color: rgb(255, 255, 119);
+}
+
+.dato img{
+    width: 75%;
+}
+
+/* Pagina Glosario */
+/* Seccion del Glosario */
+.section-glosario{
+    background-color: rgba(28, 59, 143, 0.493);
+    padding: 0 2rem;
+    color: white;
+    list-style-type: none;
+    text-align: justify;
+}
+
+.section-glosario span{
+    color: aqua;
+}
+
+.section-glosario a{
+    text-decoration: none;
+    color: white;
+    padding: 0 2rem;
+}
+
+.section-glosario a:hover{
+    color: aqua;
+}
+
+.contenido-glosario{
+    margin-top: 2rem;
+    background-color: rgba(16, 15, 97, 0.548);
+    padding: 1rem;
+    line-height: 1.1;
+    text-align: justify;
+    color: white;
+}
+
+.contenido-glosario p{
+    padding: .1rem 3rem;;
+}
+
+.contenido-glosario h1{
+    color: rgb(153, 255, 255);
+    margin-top: 2rem;
+}
+
+.section-trivia{
+    width: 85%;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px){
+   .section-trivia{
+        width: 100%;
+   }
+}
+
+.container-trivia img{
+    display: block;
+    width: 50%;
+    margin: 1rem auto;
+}
+.info-trivia{
+    text-align: center;
+    background-color: #021333;
+    border: 1px solid white;
+    border-radius: 1rem;
+    box-shadow: 5px 5px rgba(0, 247, 255, 0.473), -2px -2px rgba(15, 97, 97, 0.548);
+    padding: 2rem;
+    margin: 3rem;
+    color: #ffffff;
+}
+/* Página de Contacto */
+.container-nogrid{
+    max-width: 130rem;
+    margin: 6rem auto;
+    background-color: #001a4b96;
+    padding: 2rem;
+    font-size: 2.0rem;
+}
+
+@media (min-width: 768px){
+   .container-nogrid{
+    width: 55%;
+   }
+}
+
+.container-nogrid h1{
+    font-size: 5.6rem;
+    color: aqua;
+}
+
+.container-contacto{
+    display: block;
+    background-color: #3863b34d;
+    text-align: center;
+    color: white;
+}
+
+.container-contacto a{
+    color: rgb(115, 222, 255);
+    text-decoration: none;
+    font-size: 2.6rem;
+    font-weight: bold;
+}
+
+/* Footer */
+.foot{
+/*     display: flex; */
+    background-color: rgb(0, 24, 44);
+    text-align: left;
+    color: greenyellow;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1rem;
+/*     margin-top:2rem; */
+    position: absolute;
+    width: 100%;
+}
+
+.foot section{
+    justify-content: space-evenly;
+}
+
+.foot section a{
+    float: right;
+    color: greenyellow;
+    padding: 0 1rem;
+    text-decoration: none;
+}
