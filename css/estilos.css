@@ -76,7 +76,6 @@ img{
     margin-bottom: 1rem;
     justify-content: center;
 }
-
 .campo_label{
     flex: 0 0 9rem; /* Factor de crecimiento | Factor de Decremento | Tamaño Base */ /* Sinergisa con el flex del padre campo que permite ajustar el tamaño del flex y sus elementos */ 
 }
@@ -172,6 +171,10 @@ img{
 .section-1, .section-2, .section-3, .section-4{
     background-color: #001a4b88;
     padding: 4rem;
+}
+
+.section-2{
+    background-color: #00081a00;
 }
 
 .section-news{
@@ -372,10 +375,11 @@ img{
 /* Pagina Foros */
 /* Lista de Foros, Grid-2 encontrado mas arriba en los cosos globales */
 .lista-foro{ /* Contenedor */
-    padding: 0;
+    padding: 2rem;
     list-style-type: none;
     color: white;
     text-align: justify;
+    background-color: #001a4b88;
 }
 
 .lista-foro-topico{ /* Elementos */
